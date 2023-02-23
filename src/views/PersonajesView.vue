@@ -1,11 +1,14 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Personajes from "../components/Personajes.vue";
 </script>
 
 <template>
-  <main class="fondo">
-    <TheWelcome />
-  </main>
+  <div class="fondo">
+    <h1>Personajes del programa</h1>
+
+    <Personajes />
+  </div>
+  <RouterView />
 </template>
 
 <style>
@@ -14,6 +17,5 @@ import TheWelcome from '../components/TheWelcome.vue'
     background-size: cover;
     width: 100%;
     height: 100%;
-    color: yellow;
   }
 </style>

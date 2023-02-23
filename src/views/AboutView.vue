@@ -1,15 +1,18 @@
 <template>
-  <div class="about">
+  <div class="about fondo">
     <h1>This is an about page</h1>
   </div>
 </template>
 
 <style>
-@media (min-width: 1024px) {
   .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    min-height: 65vh;
+    
   }
-}
+  .fondo{
+    background-image: url("../assets/fondo.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
 </style>

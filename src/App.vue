@@ -4,26 +4,27 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header class="bg-lime-500 w-full h-40">
-    <img src="./assets/logo.svg" alt="logo no disponible" class="w-96 h-40 mx-auto">
+  <header class="bg-black w-full h-1/5">
+    <img src="./assets/logo.svg" alt="logo no disponible" class="mx-auto" width="500" height="600">
   </header>
 
-  <div class="bg-red-400">
-    <div class="wrapper border border border-solid border-8 border-black w-full h-full">
-    <nav>
-      <RouterLink to="/">Inicio</RouterLink>
-      <RouterLink to="/personajes">Personajes</RouterLink>
-      <RouterLink to="/about">Acerca de</RouterLink>
-    </nav>
-  </div>
-  </div>
+    <div class="place-content-center bg-black">
+      <div class="bg-lime-400 wrapper border w-3/5 h-full text-center flex">
+      <div class="w-1/3">
+        <RouterLink to="/">Inicio</RouterLink>
+      </div>
+      <div class="w-1/3">
+        <RouterLink to="/personajes">Personajes</RouterLink>
+      </div>
+      <div class="w-1/3">
+        <RouterLink to="/about">Acerca de</RouterLink>
+      </div>
+    </div>
+    </div>
   <RouterView />
 </template>
 
 <style scoped>
-div{
-  color: yellow;
-}
 
 header {
   line-height: 1.5;

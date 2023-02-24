@@ -9,17 +9,18 @@ import HelloWorld from './components/HelloWorld.vue'
   </header>
 
     <div class="place-content-center bg-black">
-      <div class="bg-lime-400 wrapper border w-3/5 h-full text-center flex">
-      <div class="w-1/3">
-        <RouterLink to="/">Inicio</RouterLink>
+      <div class="bg-lime-400 wrapper w-3/5 h-full text-center flex mx-auto rounded-full">
+        <RouterLink to="/" class="w-1/3 hover:bg-lime-500">
+          Inicio
+        </RouterLink>
+        
+        <RouterLink to="/personajes" class="w-1/3 hover:bg-lime-500">
+          Personajes
+        </RouterLink>
+        <RouterLink to="/about" class="w-1/3 hover:bg-lime-500">
+          Acerca de
+        </RouterLink>
       </div>
-      <div class="w-1/3">
-        <RouterLink to="/personajes">Personajes</RouterLink>
-      </div>
-      <div class="w-1/3">
-        <RouterLink to="/about">Acerca de</RouterLink>
-      </div>
-    </div>
     </div>
   <RouterView />
 </template>

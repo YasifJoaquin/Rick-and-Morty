@@ -6,13 +6,15 @@
 
 <style>
   .about {
-    min-height: 65vh;
+    min-height: 80vh;
     
   }
+
   .fondo{
-    background-image: url("../assets/fondo.jpg");
+    background-image: url("../assets/fondo.png");
     background-size: cover;
     width: 100%;
     height: 100%;
+    color: yellow;
   }
 </style>

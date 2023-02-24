@@ -3,7 +3,7 @@ import Personajes from "../components/Personajes.vue";
 </script>
 
 <template>
-  <div class="fondo">
+  <div class="fondo about">
     <h1>Personajes del programa</h1>
 
     <Personajes />
@@ -13,9 +13,14 @@ import Personajes from "../components/Personajes.vue";
 
 <style>
   .fondo{
-    background-image: url("../assets/fondo.jpg");
+    background-image: url("../assets/fondo.png");
     background-size: cover;
     width: 100%;
     height: 100%;
+    color: yellow;
+  }
+  .about {
+    min-height: 80vh;
+    
   }
 </style>

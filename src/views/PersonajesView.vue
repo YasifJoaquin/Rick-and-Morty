@@ -13,7 +13,7 @@ import Personajes from "../components/Personajes.vue";
 
 <style>
   .fondo{
-    background-image: url("../assets/fondo.png");
+    background-image: url("../assets/fondo.jpg");
     background-size: cover;
     width: 100%;
     height: 100%;

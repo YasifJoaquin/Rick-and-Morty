@@ -1,6 +1,16 @@
 <template>
   <div class="about fondo">
-    <h1>This is an about page</h1>
+    <div class="border border-double border-black w-3/5 h-screen flex justify-center items-center">
+    <div class="border border-double border-yellow w-3/5 rounded-lg text-center">
+      <p class="text-green-500 text-4xl font-bold pt-6">Autor: Yasif Alcala</p>
+      <p class="mt-3 p-5 text-justify text-xl">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente rem vero quia necessitatibus,
+        ipsa veritatis aperiam laboriosam eos dolore, ea quos eaque saepe aspernatur officia rerum dignissimos
+        praesentium molestias similique molestiae recusandae ipsum quibusdam nobis! Explicabo corporis dicta
+        pariatur id saepe consequatur deserunt repellendus illum ut. Aut molestias ea commodi.
+      </p>
+    </div>
+  </div>
   </div>
 </template>
 

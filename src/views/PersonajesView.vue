@@ -4,7 +4,7 @@ import Personajes from "../components/Personajes.vue";
 
 <template>
   <div class="fondo about">
-    <h1 class="text-center text-5xl pt-6 italic">Personajes del programa</h1>
+    <h1 class="text-center text-5xl pt-6 italic mb-4">Personajes del programa</h1>
 
     <Personajes />
   </div>

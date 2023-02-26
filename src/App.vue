@@ -8,7 +8,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <img src="./assets/logo.svg" alt="logo no disponible" class="mx-auto" width="500" height="600">
   </header>
 
-    <div class="place-content-center bg-black">
+    <div class="place-content-center bg-black text-2xl font-bold">
       <div class="bg-lime-400 wrapper w-3/5 h-full text-center flex mx-auto rounded-full">
         <RouterLink to="/" class="w-1/3 hover:bg-lime-500">
           Inicio

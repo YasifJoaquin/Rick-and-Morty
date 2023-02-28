@@ -9,7 +9,7 @@ export default {
     return {
       info: [],
       personajes: [],
-      cont:2,
+      cont:1,
       search: "",
       dato:"",
       detalle_personajes: []
@@ -26,7 +26,7 @@ export default {
 
   methods: {
     pag(num) {
-      API_URL='https://rickandmortyapi.com/api/character/?page='+num
+      API_URL='https://rickandmortyapi.com/api/character/?page='+this.cont
       console.log(API_URL)
       axios.get(API_URL)
       .then((response) => {
@@ -34,19 +34,6 @@ export default {
         this.info = response.data.info;
         this.personajes = response.data.results;
       })
-      this.cont++
-    },
-
-    prev(num) {
-      API_URL='https://rickandmortyapi.com/api/character/?page='+num
-      console.log(API_URL)
-      axios.get(API_URL)
-      .then((response) => {
-        console.log(response.config)
-        this.info = response.data.info;
-        this.personajes = response.data.results;
-      })
-      this.cont--
     },
 
     buscando(search) {
@@ -69,8 +56,6 @@ export default {
         this.detalle_personajes = response.data;
         console.log(this.detalle_personajes)
       })
-      this.cont++
-
     }
   }
 
@@ -78,19 +63,23 @@ export default {
 
 </script>
 
-<template bg-red-400>
+<template >
   <div class="flex justify-center">
-  <button v-if="cont > 2" @click="prev(cont)" class="border border-lime-400 bg-teal-600 px-3 text-2xl text-black font-medium rounded-l-lg m-3"> Prev </button>
+  <button v-if="cont > 1" @click="pag(cont--)" class="border border-lime-400 bg-teal-600 px-3 text-2xl text-black font-medium rounded-l-lg m-3"> Prev </button>
   <input type="text" v-model="search" @input="buscando(search)" class="border border-teal-600 bg-lime-500 px-3 text-xl text-black font-medium rounded-full m-3">
-  <button v-if="cont < 43" @click="pag(cont)" class="border border-lime-400 bg-teal-600 px-3 text-2xl text-black font-medium rounded-r-lg m-3"> Next </button>
+  <button v-if="cont <= 42" @click="pag(cont++)" class="border border-lime-400 bg-teal-600 px-3 text-2xl text-black font-medium rounded-r-lg m-3"> Next </button>
   </div>
 
   <div class="flex">
-    <div class="border border-lime-500 w-2/5 h-screen text-center">
-    <h2>pagina siguiente {{ cont }}</h2>
+    <div class="border border-lime-500 w-3/6 h-auto text-center">
+    <h2>pagina actual: {{ cont }}</h2>
     <ul class="list-disc">
       <li v-for="p in personajes">
-        <button @click="datosp(p.id)">{{ p.name }} id:{{ p.id }}</button> 
+        <div class="flex items-center justify-center">
+          <img :src="p.image" alt="imagen no disponible" class="w-10 h-10 rounded-full mr-4" />
+          <button @click="datosp(p.id)" class="text-xl font-bold">{{ p.name }}</button> 
+        </div>
+        
       </li>
     </ul>
   </div >
